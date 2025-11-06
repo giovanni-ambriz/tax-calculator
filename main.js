@@ -20,6 +20,11 @@ document.getElementById('calculate').addEventListener('click', () => {
   const incomeInput = document.getElementById('income').value;
   const income = parseFloat(incomeInput);
 
+  if (isNaN(income) || income < 0) {
+    alert('Please enter a valid positive income amount. For example: 15000');
+    return;
+  }
+
   const tax = calculateTax(income);
   document.getElementById('result').textContent = `$${tax.toFixed(2)}`;
 })
