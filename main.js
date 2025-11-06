@@ -26,5 +26,5 @@ document.getElementById('calculate').addEventListener('click', () => {
   }
 
   const tax = calculateTax(income);
-  document.getElementById('result').textContent = `$${tax.toFixed(2)}`;
+  document.getElementById('result').textContent = `$${Number(tax.toFixed(2)).toLocaleString()}`;
 })
